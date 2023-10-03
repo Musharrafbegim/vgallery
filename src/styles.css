@@ -18,6 +18,7 @@ body{
     align-items: stretch;
     gap: 2rem;
     padding: 0 1rem;
+    margin: 1rem 0;
 }
 
 .site-title{
@@ -49,3 +50,39 @@ body{
     color: #777;
 }
 
+.main{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+
+.text-container{
+    float: left;
+    clear: left;
+    width: 20%;
+    margin-left: 5rem;
+    text-align: left;
+}
+
+
+.img-main{
+    width: 60%;
+    position: absolute;
+    right: 0;
+}
+.img-sec{
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 10rem;
+    left: 200px;
+}
+
+.img-tre{
+    width: 35%;
+    position: absolute;
+    right: 0;
+    top: 19rem;
+    left: 5rem;
+}

@@ -1,9 +1,10 @@
 import React from "react";
+import HomeSection from "../component/HomeSection";
 
 export default function Home() {
     return(
-        <div>
-            <h1>Home</h1>
-        </div>
+        <>
+        <HomeSection></HomeSection>
+        </>
     )
 }
