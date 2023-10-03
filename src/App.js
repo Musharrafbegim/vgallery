@@ -8,6 +8,8 @@ import Home from "./pages/Home";
 import {Route, Routes} from "react-router-dom";
 import Views from "./pages/Views";
 import Footer from "./component/Footer";
+import Signup from "./pages/Signup";
+import Login from "./pages/Login";
 
 function App() {
   return (
@@ -21,6 +23,10 @@ function App() {
           <Route path="/contacts" element={<Contacts/>}></Route>
           <Route path="/" element={<Home/>}></Route>
           <Route path="/view-more" element={<Views/>}></Route>
+          <Route path="/signup" element={<Signup/>}></Route>
+          <Route path="/login" element={<Login/>}></Route>
+
+
         </Routes>
         <Footer></Footer>
         
