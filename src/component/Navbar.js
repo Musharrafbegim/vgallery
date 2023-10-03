@@ -8,9 +8,9 @@ export default function Navbar() {
                  <ul>
                     <CustomLink to="/artists">Artists</CustomLink>
                     <CustomLink to="/collections">Collections</CustomLink>
-                    <Link to="/" className="site-title">VGallery</Link>
+                    <Link to="/home" className="site-title">VGallery</Link>
                     <CustomLink to="/contacts">Contacts</CustomLink>
-                    <CustomLink to="/">Home</CustomLink>
+                    <CustomLink to="/home">Home</CustomLink>
                  </ul>
             </nav>
     )

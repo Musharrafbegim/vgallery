@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import {  createUserWithEmailAndPassword  } from 'firebase/auth';
 import { auth } from '../firebase';
+import Login from './Login';
 
 
 export default function Signup() {
@@ -36,7 +37,7 @@ export default function Signup() {
         <section>
             <div>
                 <div>                  
-                    <h1> FocusApp </h1>                                                                            
+                    <h1> VGallery </h1>                                                                            
                     <form>                                                                                            
                         <div>
                             <label htmlFor="email-address">
@@ -77,9 +78,9 @@ export default function Signup() {
                    
                     <p>
                         Already have an account?{' '}
-                        <NavLink to="/login" >
+                        <Link to="/login" element={Login}>
                             Sign in
-                        </NavLink>
+                        </Link>
                     </p>                   
                 </div>
             </div>
