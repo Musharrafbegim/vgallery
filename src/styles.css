@@ -11,6 +11,14 @@ body{
     text-align: center;
 }
 
+.container-white{
+    margin-top: 8rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    text-align: left;
+    width: 100%;
+}
+
 .nav{
     color: black;
     display: flex;
@@ -85,4 +93,20 @@ body{
     right: 0;
     top: 19rem;
     left: 5rem;
+}
+
+.btn-primary{
+    padding: 1rem;
+    background-color: #E8916E;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+}
+.btn-primary:hover{
+    padding: 1rem;
+    background-color: white;
+    text-decoration: none;
+    color: #E8916E;
+    border-radius: 10px ;
+    border: 2px solid #E8916E;
 }

@@ -6,18 +6,20 @@ import Artists from "./pages/Artists";
 import Home from "./pages/Home";
 
 import {Route, Routes} from "react-router-dom";
+import Views from "./pages/Views";
 
 function App() {
   return (
     <div className="App">
       <Navbar></Navbar>
-      
+
         <Routes>
           <Route path="/artists" element={<Artists/>}></Route>
           <Route path="/collections" element={<Collections/>}></Route>
           <Route path="/" element={<Home/>}></Route>
           <Route path="/contacts" element={<Contacts/>}></Route>
           <Route path="/" element={<Home/>}></Route>
+          <Route path="/view-more" element={<Views/>}></Route>
         </Routes>
     </div>
   );
