@@ -7,12 +7,13 @@ import Home from "./pages/Home";
 
 import {Route, Routes} from "react-router-dom";
 import Views from "./pages/Views";
+import Footer from "./component/Footer";
 
 function App() {
   return (
+    <>
     <div className="App">
       <Navbar></Navbar>
-
         <Routes>
           <Route path="/artists" element={<Artists/>}></Route>
           <Route path="/collections" element={<Collections/>}></Route>
@@ -21,7 +22,11 @@ function App() {
           <Route path="/" element={<Home/>}></Route>
           <Route path="/view-more" element={<Views/>}></Route>
         </Routes>
+        <Footer></Footer>
+        
     </div>
+    
+    </>
   );
 }
 

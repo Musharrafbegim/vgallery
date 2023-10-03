@@ -4,7 +4,6 @@ import { Link, useMatch, useResolvedPath } from "react-router-dom";
 export default function Navbar() {
     
     return(
-        <div className="navbar">
             <nav className="nav">
                  <ul>
                     <CustomLink to="/artists">Artists</CustomLink>
@@ -14,7 +13,6 @@ export default function Navbar() {
                     <CustomLink to="/">Home</CustomLink>
                  </ul>
             </nav>
-        </div>
     )
 }
 
