@@ -1,43 +1,55 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 
-export default function Views() {
+function Views() {
   return (
-    <Canvas camera={{ position: [0, 2, 5] }}>
+    <Canvas style={{ width: '100%', height: '100vh' }}>
       <ambientLight intensity={0.5} />
+      <pointLight position={[5, 5, 5]} intensity={1} />
       <OrbitControls />
-      {/* Create walls */}
-      <mesh position={[0, 0, -5]} scale={[10, 5, 1]}>
-        <boxGeometry args={[1, 1, 1]} />
+
+      {/* Floor */}
+      <mesh position={[0, -0.5, 0]}>
+        <boxGeometry args={[10, 0.01, 10]} />
         <meshStandardMaterial color="white" />
       </mesh>
-      <mesh position={[0, 0, 5]} scale={[10, 5, 1]}>
-        <boxGeometry args={[1, 1, 1]} />
+
+      {/* Walls */}
+      <mesh position={[0, 2.5, 0]}>
+        <boxGeometry args={[10, 5, 0.1]} />
         <meshStandardMaterial color="white" />
       </mesh>
-      <mesh position={[5, 0, 0]} scale={[1, 5, 1]}>
-        <boxGeometry args={[1, 1, 1]} />
+      <mesh position={[0, 2.5, -5.05]}>
+        <boxGeometry args={[10, 5, 0.1]} />
         <meshStandardMaterial color="white" />
       </mesh>
-      <mesh position={[-5, 0, 0]} scale={[1, 5, 1]}>
-        <boxGeometry args={[1, 1, 1]} />
+      <mesh position={[0, 2.5, 5.05]}>
+        <boxGeometry args={[10, 5, 0.1]} />
         <meshStandardMaterial color="white" />
       </mesh>
-      {/* Create floor */}
-      <mesh position={[0, -2.5, 0]} scale={[10, 1, 10]}>
-        <boxGeometry args={[1, 1, 1]} />
-        <meshStandardMaterial color="gray" />
+      <mesh position={[-5.05, 2.5, 0]}>
+        <boxGeometry args={[0.1, 5, 10]} />
+        <meshStandardMaterial color="white" />
       </mesh>
-      {/* Add objects/art displays */}
-      <mesh position={[-2, 0, 2]}>
+      <mesh position={[5.05, 2.5, 0]}>
+        <boxGeometry args={[0.1, 5, 10]} />
+        <meshStandardMaterial color="white" />
+      </mesh>
+
+      {/* Art Displays or Objects */}
+      <mesh position={[1, 1, 1]}>
         <boxGeometry args={[0.2, 0.5, 0.05]} />
         <meshStandardMaterial color="red" />
       </mesh>
-      <mesh position={[2, 0, 2]}>
+      <mesh position={[-1, 1, 1]}>
         <boxGeometry args={[0.2, 0.5, 0.05]} />
         <meshStandardMaterial color="blue" />
       </mesh>
+
+      {/* Add more art displays or objects as needed */}
     </Canvas>
   );
 }
+
+export default Views;
